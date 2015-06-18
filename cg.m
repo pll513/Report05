@@ -11,8 +11,8 @@ while (sqrt(rho1)>eps && k<kmax)
     k = k + 1;
     if (k==1)
        p = r;
-       beta = rho1/rho0;
     else
+       beta = rho1/rho0;
        p = r + beta * p;
     end
     w = A * p';

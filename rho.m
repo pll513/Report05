@@ -15,13 +15,14 @@ end
 for i = 1:n
    for j = 1:n 
        if j < i
-           L(i,j) = -1;
+           L(i,j) = -A(i,j);
        end
        if j > i
-           U(i,j) = -1;
+           U(i,j) = -A(i,j);
        end
    end
 end
+
 
 for i = 1:m
     rho(i) = max(abs(eig(E/(Diag - w(i)*L)*((1 - w(i))*Diag + w(i)*U))));
