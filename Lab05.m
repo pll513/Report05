@@ -10,7 +10,7 @@ disp('*********************************************************');
 N = [2,3,4,5,6];
 W = zeros(1,5);
 R = zeros(1,5);
-w = linspace(0,2,100000);
+w = linspace(0,2,1000000);
 
 
 for i = 1:5
@@ -26,9 +26,9 @@ result = sor(H,H*ones(5,1),W(4),10^-6,16000);
 [m,n] = size(result);
 count = m - 1;
 emax = max(abs(result(m,2:n)-ones(1,n-1)));
-fprinf('%d\n',N(4));
-fprinf('%f\n',count);
-fprinf('%f\n\n',emax);
+fprintf('%d\n',N(4));
+fprintf('%d\n',count);
+fprintf('%f\n\n',emax);
 
 N = [10,20,40,60,80];
 
